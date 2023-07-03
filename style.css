@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(66, 66, 66);
+}
+.box{
+    position: relative;
+    background-color: rgb(84, 196, 196);
+    width: 380px;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 360px;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 360px;  
+    transform-origin: bottom right;
+    top: -50%;
+    left: -50%;
+    background: rgb(201, 42, 148);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 360px;
+    transform-origin: bottom right;
+    top: -50%;
+    left: -50%;
+    background: rgb(201, 42, 148);
+    animation: animate 6s linear infinite;
+}
+@keyframes animate 
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+form{
+    position: absolute;
+    inset:  5px;
+    background-color: rgb(71, 70, 70);
+    border-radius: 8px;
+    padding: 20px 30px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.box form h2{
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.inputbox{
+    margin-top: 20px;
+    width: 300px;
+}
+.inputbox input{
+    margin-top: 15px;
+    background-color: transparent;
+    padding: 5px 5px 5px 10px;
+    width: 100%;
+    outline: none;
+    margin-top: 5px;
+    outline: none;
+    font-size: 25px;
+    color: white;
+}
+.inputbox span
+{
+    color: white;
+    font-size: 25px;
+}
+.link{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.link a{
+    text-decoration: none;
+    color: gray;
+}
+.link a:hover{
+    color: white;
+}
+.btn{
+    width: 80px;
+    margin-top: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+}
+.btn:active{
+    opacity: 0.8;
+}   
